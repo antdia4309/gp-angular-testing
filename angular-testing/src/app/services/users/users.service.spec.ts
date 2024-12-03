@@ -37,6 +37,8 @@ describe('UsersService', () => {
       service.all().subscribe(res => {
         response = res;
       });
+
+      expect(response).toEqual(userResponse);
     });
   });
 
@@ -56,6 +58,7 @@ describe('UsersService', () => {
       service.findOne('2').subscribe(res => {
         response = res;
       });
+
       expect(response).toEqual(userResponse);
     });
   });
